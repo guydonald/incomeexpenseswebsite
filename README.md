@@ -1,1 +1,1 @@
-# Django app incomeexpenseswebsite
+# Django with app incomeexpenseswebsite
