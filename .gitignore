@@ -1,0 +1,5 @@
+.idea/
+db.postgresql
+__pycache__/
+.env/
+.env

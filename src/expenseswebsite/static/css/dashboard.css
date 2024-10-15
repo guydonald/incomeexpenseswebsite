@@ -1,0 +1,49 @@
+.bi {
+	affichage: bloc en ligne;
+	largeur: 1rem;
+	hauteur: 1rem;
+}
+
+/*
+   * Barre latérale
+   */
+
+@media (largeur minimale : 768 px) {
+	.barre latérale .offcanvas-lg {
+		position: -webkit-sticky;
+		position: collante;
+		haut: 48 px;
+	}
+
+	.barre de navigation-recherche {
+		affichage: bloc;
+	}
+}
+
+.barre latérale .nav-link {
+	taille de police: .875 rem;
+	poids de police: 500;
+}
+
+.barre latérale .nav-link.active {
+	couleur: #2470dc;
+}
+
+.en-tête de la barre latérale {
+	taille de police: .75 rem;
+}
+
+/*
+   * Barre de navigation
+   */
+
+.navbar-marque {
+	rembourrage supérieur: .75rem;
+	rembourrage inférieur: .75rem;
+	couleur d'arrière-plan : rgba(0, 0, 0, .25);
+ boîte-ombre: insertion -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.barre de navigation .contrôle de formulaire {
+	rembourrage: .75rem 1rem;
+}

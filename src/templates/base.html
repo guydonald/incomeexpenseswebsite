@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>TrulyExpenses
+    {% block title %}
+
+    {% endblock %}
+  </title>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow p-1">
+    <a href="#" class="navbar-brand col-sm-3 col-md-2 mr-0">TrulyExpenses</a>
+    <ul class="navbar-nav px-3" style="display: flex; flex-direction: row;align-items: center;">
+
+      <li class="nav-item text-nowrap">
+        <span class="nav-link" href="">
+          ({{ request.user.username }})
+        </span>
+      </li>
+
+      <li class="nav-item text-nowrap" style="margin-left: 20px ;">
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <input class="text text-capitalize" type="submit" value="Sign in">
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+      {% include 'partials/_sidebar.html' %}
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        {% block content %}
+
+        {% endblock %}
+      </main>
+    </div>
+  </div>
+
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="{% static 'js/mdb.umd.min.js'%}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
