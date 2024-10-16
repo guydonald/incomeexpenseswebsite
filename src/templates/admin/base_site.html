@@ -1,0 +1,59 @@
+{% extends 'admin/base.html' %}
+
+{% load static %}
+
+
+{% block branding %}
+
+<h1 id="header">
+	<img src="{% static 'img/melanger.png' %}" width="35" height="35" />
+	TrulyExpenses
+</h1>
+
+<style>
+	#header {
+		background: rgb(0, 62, 69);
+		color: #ffffff;
+	}
+
+	#branding h1 {
+		color: #ffffff;
+	}
+
+	div.breadcrumbs {
+		background: rgb(61, 88, 106);
+		color: #ffffff;
+	}
+
+	.form-row,
+	.login .submit-row {
+		padding: 10px !important;
+	}
+
+	input[type="submit"],
+	input[type="button"],
+	.submit-row input {
+		width: 100%;
+		background: rgb(0, 62, 69);
+	}
+
+	.module h2,
+	.module caption,
+	.inline-group h2 {
+		background: rgb(0, 62, 69);
+	}
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+<h1>Site</h1>
+{% endblock %}
+
+
+{% block extra_style %}
+
+<link rel="stylesheet" href="{% static 'css/adminstyle.css' %}">
+
+{% endblock %}

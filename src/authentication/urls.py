@@ -8,6 +8,7 @@ from .views import (
     VerificationView,
     LoginView,
     LogoutView,
+    RequestPasswordResetEmail,
 )
 
 
@@ -26,4 +27,9 @@ urlpatterns = [
         name="validate_email",
     ),
     path("activate/<uidb64>/<token>/", VerificationView.as_view(), name="activate"),
+    path(
+        "request-reset-link/",
+        csrf_exempt(RequestPasswordResetEmail.as_view()),
+        name="request-password",
+    ),
 ]
